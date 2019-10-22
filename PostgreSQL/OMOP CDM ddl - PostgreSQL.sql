@@ -254,9 +254,9 @@ CREATE TABLE observation_period
      observation_period_id				INTEGER		NOT NULL , 
      person_id							INTEGER		NOT NULL , 
      observation_period_start_date		DATE		NOT NULL , 
-     observation_period_start_datetime		TIMESTAMP		NOT NULL ,
+     observation_period_start_datetime		TIMESTAMP		NULL ,
      observation_period_end_date		DATE		NOT NULL ,
-     observation_period_end_datetime		TIMESTAMP		NOT NULL ,
+     observation_period_end_datetime		TIMESTAMP		NULL ,
 	 period_type_concept_id				INTEGER		NOT NULL
     ) 
 ;
@@ -324,7 +324,7 @@ CREATE TABLE procedure_occurrence
      person_id						INTEGER			NOT NULL , 
      procedure_concept_id			INTEGER			NOT NULL , 
      procedure_date					DATE			NOT NULL , 
-     procedure_datetime					TIMESTAMP			NOT NULL ,
+     procedure_datetime					TIMESTAMP			NULL ,
      procedure_type_concept_id		INTEGER			NOT NULL ,
 	 modifier_concept_id			INTEGER			NULL ,
 	 quantity						INTEGER			NULL , 
@@ -344,7 +344,7 @@ CREATE TABLE drug_exposure
      person_id						INTEGER			NOT NULL , 
      drug_concept_id				INTEGER			NOT NULL , 
      drug_exposure_start_date		DATE			NOT NULL , 
-     drug_exposure_start_datetime		TIMESTAMP			NOT NULL ,
+     drug_exposure_start_datetime		TIMESTAMP			NULL ,
      drug_exposure_end_date			DATE			NULL ,
      drug_exposure_end_datetime			TIMESTAMP			NULL ,
      drug_type_concept_id			INTEGER			NOT NULL ,
@@ -393,7 +393,7 @@ CREATE TABLE condition_occurrence
      person_id						INTEGER			NOT NULL , 
      condition_concept_id			INTEGER			NOT NULL , 
      condition_start_date			DATE			NOT NULL , 
-     condition_start_datetime			TIMESTAMP			NOT NULL ,
+     condition_start_datetime			TIMESTAMP			NULL ,
      condition_end_date				DATE			NULL ,
      condition_end_datetime				TIMESTAMP			NULL ,
      condition_type_concept_id		INTEGER			NOT NULL ,
